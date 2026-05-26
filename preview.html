@@ -1423,6 +1423,10 @@
                 let shuffledHooks = shuffle([...hooks]);
 
                 for (let i = 0; i < count; i++) {
+                    // Check for special slots (Image 3: Selfie, Images 2, 5, 8: Back view)
+                    const isSelfie = (i === 2); // Image 3
+                    const isBackView = (i === 1 || i === 4 || i === 7); // Images 2, 5, 8
+
                     const currentEnvObj = shuffledEnvs[i % shuffledEnvs.length];
                     const currentEnvPrompt = currentEnvObj.prompt;
                     let currentAction = shuffledActions[i % shuffledActions.length];
@@ -1436,10 +1440,6 @@
                     const hook = shuffledHooks[i % shuffledHooks.length];
 
                     let shotDetails = "";
-
-                    // Check for special slots (Image 3: Selfie, Images 2, 5, 8: Back view)
-                    const isSelfie = (i === 2); // Image 3
-                    const isBackView = (i === 1 || i === 4 || i === 7); // Images 2, 5, 8
 
                     if (isSelfie) {
                         shotDetails = `IMAGE ${i+1} (SELFIE SHOT)
