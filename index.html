@@ -1409,6 +1409,9 @@
                 const shuffledEnvs = shuffle([...envPool]);
                 const shuffledActions = shuffle([...actionPool]);
                 
+                const instaPosesCat = this.lifestyleCategories.find(c => c.id === 'insta_poses');
+                let randomInstaPool = instaPosesCat ? shuffle([...instaPosesCat.actions]) : [];
+                
                 const times = ['Early morning', 'Bright morning', 'Midday harsh sun', 'Afternoon soft sun', 'Golden hour orange glow', 'Evening warm twilight', 'Night indoor lights', 'Night outdoor streetlamps'];
                 const distances = ['D01: Extreme close face and bust', 'D02: Close portrait head to chest', 'D03: Half body head to waist', 'D04: Three quarter body', 'D05: Full body', 'D06: Far full body', 'D07: Wide environmental'];
                 const cameras = ['C01: Floor level shooting upward', 'C02: Overhead looking down', 'C03: Through textured glass', 'C05: Wide angle perspective', 'C06: Pure side profile', 'C07: Hidden observer plant filter', 'C08: Room mirror reflection', 'C09: Over shoulder candid', 'C11: Dutch tilt candid', 'C12: Through doorway framed by arch'];
@@ -1422,7 +1425,10 @@
                 for (let i = 0; i < count; i++) {
                     const currentEnvObj = shuffledEnvs[i % shuffledEnvs.length];
                     const currentEnvPrompt = currentEnvObj.prompt;
-                    const currentAction = shuffledActions[i % shuffledActions.length];
+                    let currentAction = shuffledActions[i % shuffledActions.length];
+                    if (!isSelfie && !isBackView && randomInstaPool.length > i) {
+                        currentAction += ` (Secondary subtle expression/candid movement: ${randomInstaPool[i]})`;
+                    }
                     
                     const time = shuffledTimes[i % shuffledTimes.length];
                     const distance = shuffledDistances[i % shuffledDistances.length];
@@ -1865,6 +1871,10 @@ NO collage EVER.`;
                     randomizePoses() {
                         this.params.isFlashing = true;
                         setTimeout(() => {
+                            // Select 3 to 6 random pose packs for massive, extreme diversity
+                            const shuffledPacks = [...this.customPosePacks].sort(() => 0.5 - Math.random());
+                            this.params.selectedLifestyleTypes = shuffledPacks.slice(0, Math.floor(Math.random() * 4) + 3).map(p => p.id);
+                            
                             this.params.refreshKey++; // Force UI update
                             this.params.isFlashing = false;
                         }, 150);
