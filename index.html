@@ -1346,468 +1346,10 @@
             ],
 
             getImagesPrompt() {
-                if (this.params.lifestyleCategory === 'ultimate_story') {
-                    return `💬
-You are an AI image generation system.
-CRITICAL COMMAND: generate a full multi-image editorial sequence automatically, export each frame as a separate standalone image, maintain identical fictional model continuity, same outfit fit, same silhouette, same lighting, same fashion catalog aesthetic across all images.
-
-Generate ${this.params.imageCount} SEPARATE images.
-Each image = ONE independent vertical 9:16 frame
-Generate image 1 alone → image 2 alone → until image ${this.params.imageCount}
-
-STRICT:
-NO collage / NO grid / NO split screen / NO multiple frames
-If combined → regenerate that image only
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🔒 IDENTITY & STYLE LOCK
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-fictional AI-generated adult fashion model inspired by the reference style only, do not replicate the real person's identity, preserve outfit aesthetic and editorial composition only.
-commercial swimwear catalog photography, unique generated identity, consistent silhouette, realistic anatomy, luxury resort editorial style.
-
-FACE: beautiful Moroccan face structure / warm skin tone (unique generated identity)
-HAIR: same style as reference
-JEWELRY: same necklace chain always
-MAKEUP: editorial Moroccan
-LOCK: Maintain identical fictional model continuity across all images.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🔒 BODY LOCK – EXACT MEASUREMENTS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Height: ${this.params.height} cm
-
-UPPER BODICE / CHEST: ${this.params.bust} cm
-Voluminous and structurally prominent upper silhouette
-High, structured, and clearly defined shape always
-Garment exhibits tight tailored tension across the chest
-Prominent structural projection from front AND side profile
-Maintain identical upper volume as the fictional reference
-
-WAISTLINE: ${this.params.waist} cm
-Naturally defined and clear
-Visible tailored indentation between upper and lower silhouette
-Not exaggerated – natural hourglass contour
-
-LOWER SILHOUETTE / HIPS: ${this.params.hips} cm
-Extremely wide, voluminous structural drape
-Prominent backward curve – strong structural projection
-Full rounded contour, lifted and firm always
-Wide lower-to-waist ratio very visible
-Higher placement – structured not drooping
-Maintain identical lower volume as the fictional reference
-
-LEGS: ${this.params.thighs} cm each
-Full, structured and proportional to wide silhouette
-Naturally touching at top
-Smooth transition from lower curve to leg
-Athletic thickness, voluminous
-
-CALVES: 38 cm
-Defined and proportional
-Feminine shape – not too thin not too thick
-
-SHOULDERS: 40 cm width
-Slightly narrower than hips
-Feminine slope natural
-
-ALL CONTOURS:
-Structured, lifted, natural – high fashion posture
-Fabric shaped strictly by body contours always
-Weight shifted naturally to one side
-Upright confident posture always
-Body shape through movement and camera ONLY
-
-FORBIDDEN:
-NO hand on hip / NO hand on waist /
-NO arms crossed / NO classic model stance
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🔒 PRODUCTS LOCK
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Use the fictional clothing from the reference EXACTLY
-NO redesign / NO replacement / NO changes
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🔒 LIGHTING – VARIES EACH IMAGE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Natural realistic ONLY – varies per scene:
-Early morning: soft blue white light
-Morning: bright white Mediterranean harsh
-Midday: strong direct sun hard shadows
-Afternoon: warm golden starting
-Golden hour: rich warm orange glow
-Evening: orange street lamps beginning
-Night indoor: normal ceiling or LED light
-Night outdoor: street lamp mix dark
-NO studio / NO dramatic / NO colored fantasy
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🔒 DISTANCE SYSTEM – EVERY IMAGE DIFFERENT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-D01: Extreme close – face and bust only
-D02: Close portrait – head to chest
-D03: Half body – head to waist
-D04: Three quarter – head to thigh
-D05: Full body – head to toe
-D06: Far full body – full body small in frame
-D07: Wide environmental – tiny figure large space
-D08: Torso only – no face no legs
-D09: Legs and hips only – waist down
-D10: Over shoulder close – face and shoulder
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🔒 BACK VIEW RULE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Images 2 / 5 / 8 = back view
-Each completely different pose and location
-
-BACK 1 – Image 2:
-Walking away body slightly swaying
-Arms relaxed swinging naturally
-Wide hip movement visible each step
-Looking straight ahead not at camera
-Full back garment and hip projection
-
-BACK 2 – Image 5:
-Seated on low surface back to camera
-Both elbows on knees leaning forward
-Head slightly down relaxed
-Hair falling forward naturally
-Wide seated hip and back garment visible
-
-BACK 3 – Image 8:
-Standing at window both hands on glass
-Looking outside forehead near glass
-Body weight on one leg natural lean
-Back garment and wide hip against light
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🔒 SELFIE RULE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Selfie images must be REALISTIC selfie:
-Phone held by one arm extended
-Only the arm holding phone visible
-Angle from above looking down slightly
-Face and upper body in frame
-NO full body visible in selfie
-Arm naturally stretched – realistic proportion
-Background visible behind naturally
-NOT a photo of someone taking selfie
-ACTUAL selfie perspective always
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🔒 VILLA SYSTEM
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Fictional lived-in Casablanca villa set design
-Beige stone / black metal frames / glass entrance
-Garden / pool / garage / normal family atmosphere
-
-Real life details always:
-Phone cable on floor / charger plugged in /
-half-drunk water glass / remote face-down /
-shoes not perfectly placed / jacket on chair /
-used coffee cup with ring mark / open laptop /
-sunglasses thrown on surface /
-shopping bag open on counter /
-laundry or clothes on chair
-
-Garage: Mercedes G-Class with fictional Moroccan license plate
-Porsche 718 Boxster white pink top with fictional Moroccan license plate
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🔒 FRIEND SYSTEM
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Same fictional friend face always
-Adult Moroccan woman 25+ NOT real
-Lighter skin / shorter curly dark hair
-ONE outfit locked all friend scenes this session
-Natural candid interactions – never posed
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🔒 MOVEMENT LIBRARY
-Every image combines MULTIPLE movements
-FORBIDDEN: hand on hip / hand on waist /
-arms crossed / classic model stance
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-M01: Pulling hair up both arms raised elbows out
-M02: Sitting floor legs forward palms behind
-M03: Mid-laugh hand flying to cover mouth
-M04: Walking looking at phone shoulder hits door
-M05: Sitting on counter legs dangling both hands busy
-M06: Lying on side head propped on arm
-M07: Reaching up to shelf body stretching upward
-M08: Pushing door with shoulder body leaning in
-M09: Sitting on stair sideways knees up chin on knees
-M10: Pausing in doorway one hand on frame above
-M11: Bending close to mirror hands on vanity
-M12: Sitting cross-legged floor absorbed in phone
-M13: Standing at pool edge toes at edge arms out
-M14: Stepping out of car one foot on ground reaching
-M15: Lying on stomach feet up chin on both hands
-M16: Turning suddenly body mid-rotation hair swinging
-M17: Sitting leaning far back legs extended feet up
-M18: Walking eating or drinking unaware of camera
-M19: Sitting on window sill one leg up back on frame
-M20: Frozen catching reflection in glass surprised
-M21: Squatting down reaching something on floor
-M22: Stretching arms above head back naturally arched
-M23: Leaning on wall shoulder first knee bent on wall
-M24: Writing or typing head down absorbed in task
-M25: Shaking hair loose after removing hair tie
-M26: Kneeling on one knee on floor reaching forward
-M27: Standing on tiptoe reaching high shelf
-M28: Sitting on edge of surface leaning very far forward
-  both forearms on knees hands clasped
-M29: Walking while laughing with friend mid-stride
-M30: Turning back to camera and looking over shoulder
-  one hand just releasing hair tie shaking hair
-M31: Crouching on floor both knees down sitting back
-  on heels both hands resting open on thighs
-M32: Standing side profile arms completely loose
-  at sides looking far away not at camera
-M33: Lying on back knees bent feet flat surface
-  one arm under head other on stomach
-M34: Sitting reversed on chair back facing front
-  arms folded over chair back chin on arms
-M35: Walking up or down stairs mid-step
-  one hand trailing wall no railing grip
-M36: Leaning both palms flat on table or island
-  body angled forward looking at something
-M37: Sitting cross-legged on bed or floor
-  both hands on ankles back straight
-M38: Standing with weight on one leg other crossed
-  in front at ankle both arms loose swinging
-M39: Mid-spin caught body rotating
-  skirt or fabric caught in spin motion
-M40: Sitting on outdoor step or curb naturally
-  elbows on knees looking at street or garden
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🔒 CAMERA LIBRARY
-Every image combines MULTIPLE cameras
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-C01: Floor level shooting upward extreme
-C02: Above head looking down overhead
-C03: Through frosted or textured glass
-C04: Extreme close face and shoulder only
-C05: Far wide tiny figure large space
-C06: Waist height pure side profile
-C07: Hidden behind furniture or plant
-C08: Through room mirror reflection
-C09: Over shoulder seeing what she sees
-C10: Pool water level foreground water
-C11: Tilted Dutch angle 15 degrees
-C12: Through doorway framed by arch
-C13: High room corner wide angle
-C14: Extremely close on hands or detail
-C15: Long lens far distance candid
-C16: Through car window glass
-C17: Between two objects creating frame
-C18: From under table looking up
-C19: Through staircase railing gaps
-C20: Reflection in phone or screen
-C21: Through plant leaves nature filter
-C22: From outside window looking in
-C23: Bathroom mirror over shoulder
-C24: Low angle from pool deck level
-C25: Wide street candid from far
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🔒 HOOK SYSTEM
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-H01: Caught completely unaware candid
-H02: Double mirror reflection depth
-H03: Silhouette against bright window
-H04: Motion blur on moving part
-H05: Subject sharp everything else soft
-H06: Reflection in unexpected surface
-H07: Environmental frame within frame
-H08: Scale contrast tiny vs large space
-H09: Direct sudden eye contact surprise
-H10: Through object partial obscure
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📸 ${this.params.imageCount} IMAGES
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-IMAGE 1
-TIME: Early morning
-DISTANCE: D04 – three quarter body
-FRONT VIEW – Villa bedroom
-Real bedroom: slightly messy bed /
-charger on floor / clothes on chair /
-soft early morning blue white light
-Movements: M01 + M22
-Pulling hair up while stretching arms –
-both arms raised naturally
-Camera: C08 + C12
-Through mirror in doorway reflection
-Hook: H02 – mirror reflection depth
-
-IMAGE 2
-TIME: Morning bright
-DISTANCE: D05 – full body
-BACK VIEW 1 – Villa hallway or corridor
-Real hallway: shoes left on floor /
-jacket on hook / charger cable /
-bright morning Mediterranean light
-Use BACK 1: walking away hip sway
-Camera: C15 + C06
-Long lens from far pure side-back
-Hook: H05 – body sharp background soft
-
-IMAGE 3
-TIME: Midday
-DISTANCE: D01 – extreme close selfie
-SELFIE – Villa balcony or bedroom
-SELFIE RULES:
-One arm extended holding phone /
-only that arm visible /
-face and upper body only /
-angle from above looking down /
-background visible naturally
-Movements: realistic selfie arm position only
-Camera: actual selfie POV perspective
-Hook: H09 – direct eye contact close
-
-IMAGE 4
-TIME: Afternoon warm
-DISTANCE: D06 – far full body
-FRONT VIEW – Villa pool area
-Real pool: plastic lounger /
-sunscreen open and used /
-flip flops thrown near edge /
-warm afternoon sun hard shadows
-Movements: M13 + M38
-At pool edge weight shifted crossed ankle
-Camera: C10 + C11
-Water level Dutch angle
-Hook: H07 – environment frame depth
-
-IMAGE 5
-TIME: Golden hour
-DISTANCE: D09 – waist down only
-BACK VIEW 2 – Villa garden or outdoor
-Use BACK 2: seated elbows on knees
-Camera: C09 + C05
-Over shoulder wide environmental
-Hook: H03 – silhouette against golden light
-
-IMAGE 6
-TIME: Late afternoon
-DISTANCE: D03 – half body
-FRONT VIEW – Villa salon with friend
-Real salon: cushions displaced /
-friend bag open on floor /
-two different style drinks on table /
-warm late afternoon window light
-Movements: M29 + M03
-Walking with friend mid-laugh
-Camera: C07 + C15
-Hidden observer long lens candid
-Hook: H01 – caught unaware natural
-
-IMAGE 7
-TIME: Evening warm
-DISTANCE: D07 – wide environmental
-FRONT VIEW – Villa garage both cars
-Both cars visible correct plates /
-real garage oil spot tools /
-evening warm indoor light
-Movements: M14 + M20
-Exiting car catching reflection in glass
-Camera: C01 + C17
-Floor level between two cars
-Hook: H06 – unexpected reflection
-
-IMAGE 8
-TIME: Night indoor
-DISTANCE: D08 – torso only no face
-BACK VIEW 3 – Villa window
-Real window: city lights outside /
-night indoor ceiling light /
-dark Casablanca street visible
-Use BACK 3: hands on glass looking out
-Camera: C03 + C22
-Through glass from outside looking in
-Hook: H03 – silhouette against night window
-
-IMAGE 9
-TIME: Night outdoor
-DISTANCE: D02 – close portrait
-FRONT VIEW – Casablanca Corniche night
-Real Corniche: orange street lamps /
-real Atlantic dark / real people blurred /
-real café lights behind /
-uneven real street lighting
-Movements: M16 + M25
-Turning suddenly hair shaking loose
-Camera: C15 + C11
-Long lens candid Dutch tilt
-Hook: H09 – sudden eye contact night
-
-IMAGE 10
-TIME: Night indoor warm
-DISTANCE: D10 – over shoulder close
-FRONT VIEW – Villa dressing or bedroom
-Real room: makeup spread used /
-LED strip on / clothes on floor /
-normal bedroom disorder
-Movements: M11 + M24
-Close to mirror absorbed in detail
-Camera: C23 + C08
-Bathroom over shoulder through mirror
-Hook: H02 – double mirror depth
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-REALISM RULES
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Everything imperfect and lived-in:
-Nothing staged for camera
-Objects where real use left them
-Real Casablanca when outdoor:
-real streets / real buildings /
-real people doing real things /
-harsh Mediterranean light not golden film
-Coffee: small simple cup matching location
-Items randomly placed not arranged
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-FINAL RULES
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Every generation new combinations never repeat
-Same face / necklace / products / villa / garage
-EXACTLY 3 back views – images 2 / 5 / 8
-Selfie image 3 = realistic selfie arm only visible
-Upper bodice ${this.params.bust}cm voluminous projected forward always
-Lower silhouette ${this.params.hips}cm extremely wide rounded lifted always
-Legs ${this.params.thighs}cm full proportional always
-NO hand on hip / NO hand on waist ever
-Natural realistic lighting varies per image
-Distance different every image
-ONE frame per image – NEVER collage
-DO NOT STOP UNTIL IMAGE ${this.params.imageCount} COMPLETE
-No collage ever.`;
-                }
-
                 const count = parseInt(this.params.imageCount);
                 let sequence = [];
                 
-                // Shuffle helper function for extreme diversity
+                // Shuffle helper function for extreme variation
                 const shuffle = (array) => {
                     let currentIndex = array.length, randomIndex;
                     while (currentIndex != 0) {
@@ -1818,118 +1360,134 @@ No collage ever.`;
                     return array;
                 };
 
-                // Check if user wants extreme diversity (Random Mix selected or Environment is Random All)
-                const isExtremeDiversity = this.params.lifestyleCategory === 'random_lifestyle' || this.params.environment === 'random_all' || this.params.environment.startsWith('random_country_');
-
-                let selectedHatat = [];
-                let selectedBlayss = [];
-                
-                const instaPosesCat = this.lifestyleCategories.find(c => c.id === 'insta_poses');
-                let randomInstaPool = instaPosesCat ? shuffle([...instaPosesCat.actions]) : [];
-
-                if (isExtremeDiversity) {
-                    // Generate a fully unique 10-shot sequence using the extreme diversity datasets
-                    selectedHatat = shuffle([...this.diverseHatat]).slice(0, count);
-                    selectedBlayss = shuffle([...this.diverseBlayss]).slice(0, count);
-                } else {
-                    // If they picked a specific location/lifestyle, we still try to vary things based on their selection
-                    
-                    // 1. Build Environment Pool based on Country, City, and Checklist categories (Tasnifat)
-                    let envPool = [];
-                    const currentCountry = this.countries.find(c => c.id === this.params.selectedCountry);
-                    const currentCity = currentCountry?.cities.find(c => c.id === this.params.selectedCity);
-                    
-                    if (currentCountry) {
-                        let selectedCitiesEnvs = [];
-                        this.params.selectedCities.forEach(cityId => {
-                            const city = currentCountry.cities.find(c => c.id === cityId);
-                            if (city) {
-                                selectedCitiesEnvs.push(...city.envs.map(e => e.prompt));
-                            }
-                        });
-                        
-                        if (this.params.selectedLocationPrompts && this.params.selectedLocationPrompts.length > 0) {
-                            envPool = [...this.params.selectedLocationPrompts];
+                // 1. Build Environment Pool based on checked cities and checklist items
+                let envPool = [];
+                const currentCountry = this.countries.find(c => c.id === this.params.selectedCountry);
+                if (currentCountry) {
+                    let selectedCitiesEnvs = [];
+                    this.params.selectedCities.forEach(cityId => {
+                        const city = currentCountry.cities.find(c => c.id === cityId);
+                        if (city) {
+                            selectedCitiesEnvs.push(...city.envs);
                         }
-                        
-                        // Fallback to all environments from checked cities if nothing matches
-                        if (envPool.length === 0) {
-                            envPool = [...selectedCitiesEnvs];
-                        }
+                    });
+                    
+                    if (this.params.selectedLocationPrompts && this.params.selectedLocationPrompts.length > 0) {
+                        envPool = selectedCitiesEnvs.filter(e => this.params.selectedLocationPrompts.includes(e.prompt));
                     }
                     
                     if (envPool.length === 0) {
-                        envPool = ["Casablanca Corniche at Sunset, golden hour lighting, ocean waves, luxury beach club atmosphere"];
-                    }
-                    envPool = [...new Set(envPool)];
-                    envPool = shuffle(envPool);
-
-                    // 2. Build Action Pool and shuffle it so we get new poses every time!
-                    let actionPool = [];
-                    if (this.params.manualPose && this.params.manualPose.trim() !== '') {
-                        actionPool = [this.params.manualPose];
-                    } else {
-                        let activePacks = [...(this.params.selectedLifestyleTypes || [])];
-                        
-                        // If the user has NOT selected anything (empty checklist), we automatically choose a highly sensible w realistic pose pack combination!
-                        if (activePacks.length === 0) {
-                            const currentEnv = (this.params.environment || '').toLowerCase();
-                            if (currentEnv.includes('beach') || currentEnv.includes('sea') || currentEnv.includes('corniche') || currentEnv.includes('surf')) {
-                                activePacks = ['beach', 'active', 'glamour'];
-                            } else if (currentEnv.includes('riad') || currentEnv.includes('home') || currentEnv.includes('interior') || currentEnv.includes('bazaar')) {
-                                activePacks = ['moroccan', 'cozy', 'candid'];
-                            } else if (currentEnv.includes('office') || currentEnv.includes('work') || currentEnv.includes('laptop') || currentEnv.includes('meeting')) {
-                                activePacks = ['business', 'cozy'];
-                            } else if (currentEnv.includes('airport') || currentEnv.includes('travel') || currentEnv.includes('yacht') || currentEnv.includes('car')) {
-                                activePacks = ['travel', 'glamour'];
-                            } else {
-                                // Default highly realistic w natural mix
-                                activePacks = ['glamour', 'cinematic', 'cozy'];
-                            }
-                        }
-                        
-                        activePacks.forEach(packId => {
-                            const pack = this.customPosePacks.find(p => p.id === packId);
-                            if (pack && pack.actions) {
-                                actionPool.push(...pack.actions);
-                            }
-                        });
-                    }
-                    actionPool = [...new Set(actionPool)];
-                    actionPool = shuffle(actionPool);
-                    
-                    // 3. Fill the arrays for the sequence
-                    for(let i=0; i<count; i++) {
-                        selectedBlayss.push(envPool[i % envPool.length]);
-                        selectedHatat.push(actionPool[i] || actionPool[i % actionPool.length]);
+                        envPool = [...selectedCitiesEnvs];
                     }
                 }
+                
+                if (envPool.length === 0) {
+                    envPool = [{ name: 'Corniche Vibe', icon: '🌊', prompt: "Casablanca Corniche at Sunset, golden hour lighting, ocean waves, luxury beach club atmosphere" }];
+                }
+                
+                // 2. Build Action Pool based on checked lifestyle pose packs
+                let actionPool = [];
+                if (this.params.manualPose && this.params.manualPose.trim() !== '') {
+                    actionPool = [this.params.manualPose];
+                } else {
+                    let activePacks = [...(this.params.selectedLifestyleTypes || [])];
+                    if (activePacks.length === 0) {
+                        activePacks = ['glamour', 'active', 'cozy'];
+                    }
+                    activePacks.forEach(packId => {
+                        const pack = this.customPosePacks.find(p => p.id === packId);
+                        if (pack && pack.actions) {
+                            actionPool.push(...pack.actions);
+                        }
+                    });
+                }
+                if (actionPool.length === 0) {
+                    actionPool = ["posing elegantly, confident posture, soft realistic details"];
+                }
 
-                for(let i = 0; i < count; i++) {
-                    let currentEnvPrompt = selectedBlayss[i];
-                    let currentPrompt = selectedHatat[i];
+                // Shuffled pools for maximum variation
+                const shuffledEnvs = shuffle([...envPool]);
+                const shuffledActions = shuffle([...actionPool]);
+                
+                const times = ['Early morning', 'Bright morning', 'Midday harsh sun', 'Afternoon soft sun', 'Golden hour orange glow', 'Evening warm twilight', 'Night indoor lights', 'Night outdoor streetlamps'];
+                const distances = ['D01: Extreme close face and bust', 'D02: Close portrait head to chest', 'D03: Half body head to waist', 'D04: Three quarter body', 'D05: Full body', 'D06: Far full body', 'D07: Wide environmental'];
+                const cameras = ['C01: Floor level shooting upward', 'C02: Overhead looking down', 'C03: Through textured glass', 'C05: Wide angle perspective', 'C06: Pure side profile', 'C07: Hidden observer plant filter', 'C08: Room mirror reflection', 'C09: Over shoulder candid', 'C11: Dutch tilt candid', 'C12: Through doorway framed by arch'];
+                const hooks = ['H01: Caught completely unaware candid', 'H02: Double mirror reflection depth', 'H03: Silhouette against bright background', 'H05: Subject sharp everything else soft', 'H06: Reflection in unexpected surface', 'H07: Environmental frame within frame', 'H09: Direct sudden eye contact surprise'];
+
+                let shuffledTimes = shuffle([...times]);
+                let shuffledDistances = shuffle([...distances]);
+                let shuffledCameras = shuffle([...cameras]);
+                let shuffledHooks = shuffle([...hooks]);
+
+                for (let i = 0; i < count; i++) {
+                    const currentEnvObj = shuffledEnvs[i % shuffledEnvs.length];
+                    const currentEnvPrompt = currentEnvObj.prompt;
+                    const currentAction = shuffledActions[i % shuffledActions.length];
                     
-                    // Append a random pose to ensure extreme diversity ("tanawo3") without deleting the main category's action
-                    if (this.params.lifestyleCategory !== 'insta_poses' && randomInstaPool.length > i) {
-                        currentPrompt += ` — AND CRITICAL SECONDARY POSE: ${randomInstaPool[i]}`;
+                    const time = shuffledTimes[i % shuffledTimes.length];
+                    const distance = shuffledDistances[i % shuffledDistances.length];
+                    const camera = shuffledCameras[i % shuffledCameras.length];
+                    const hook = shuffledHooks[i % shuffledHooks.length];
+
+                    let shotDetails = "";
+
+                    // Check for special slots (Image 3: Selfie, Images 2, 5, 8: Back view)
+                    const isSelfie = (i === 2); // Image 3
+                    const isBackView = (i === 1 || i === 4 || i === 7); // Images 2, 5, 8
+
+                    if (isSelfie) {
+                        shotDetails = `IMAGE ${i+1} (SELFIE SHOT)
+TIME: ${time}
+DISTANCE: D01 – extreme close selfie
+VIEW: ACTUAL SELFIE PERSPECTIVE
+SELFIE RULES: Phone held by one arm extended, only that arm visible, face and upper body in frame, background visible behind naturally.
+ACTION: Realistic selfie pose, natural happy expression, matching the environment: ${currentEnvObj.name}.
+ENVIRONMENT: ${currentEnvPrompt}
+CAMERA: Actual selfie POV perspective
+HOOK: H09 – direct eye contact close`;
+                    } else if (isBackView) {
+                        let backAction = "";
+                        if (i === 1) {
+                            backAction = "Walking away slowly, body slightly swaying, arms relaxed, looking straight ahead not at camera, showing full back garment and hip projection.";
+                        } else if (i === 4) {
+                            backAction = "Seated on a low surface back to camera, leaning forward naturally, forearms resting on knees, relaxed posture.";
+                        } else {
+                            backAction = "Standing near a window or wall, looking out, body weight shifted naturally to one side, back garment and silhouette highlighted.";
+                        }
+                        
+                        shotDetails = `IMAGE ${i+1} (BACK VIEW SHOT)
+TIME: ${time}
+DISTANCE: ${distance}
+VIEW: BACK VIEW (arch lock, waist indentation, and rounded hip projection visible)
+ACTION: ${backAction}
+ENVIRONMENT: ${currentEnvPrompt}
+CAMERA: ${camera}
+HOOK: ${hook}`;
+                    } else {
+                        shotDetails = `IMAGE ${i+1} (FRONT/THREE-QUARTER VIEW)
+TIME: ${time}
+DISTANCE: ${distance}
+VIEW: Front or three-quarter view (displaying S-curve posture)
+ACTION: ${currentAction}
+ENVIRONMENT: ${currentEnvPrompt}
+CAMERA: ${camera}
+HOOK: ${hook}`;
                     }
 
-                    let shot = `IMAGE ${i+1}\n\nGenerate independently\n\nENVIRONMENT: ${currentEnvPrompt}\nACTION: ${currentPrompt}\nCRITICAL: The pose and action MUST logically fit the ENVIRONMENT. Adapt the pose if necessary to match the location naturally.\n\n`;
-                    
+                    let shot = `${shotDetails}
+CRITICAL: The action and pose MUST logically fit the ENVIRONMENT (${currentEnvObj.name}). Ensure natural lived-in details like a water bottle, keys, or phone cable in the scene.`;
+
                     if (i === count - 1) {
-                        shot += `Finish image ${i+1}`;
+                        shot += `\nFinish image ${i+1}`;
                     } else {
-                        shot += `Finish image ${i+1} before image ${i+2}`;
+                        shot += `\nFinish image ${i+1} before image ${i+2}`;
                     }
                     sequence.push(shot);
                 }
+                
                 return sequence.join('\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n');
             },
-
                     generatePromptRaw() {
-                        if (this.params.lifestyleCategory === 'ultimate_story') {
-                            return this.getImagesPrompt();
-                        }
                         const count = parseInt(this.params.imageCount);
                         const diff = parseInt(this.params.hips) - parseInt(this.params.waist);
                         
